@@ -38,10 +38,10 @@ class ResultsScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Text(
               'Bạn đã trả lời đúng $correctAnswerNum trên ${questions.length} câu hỏi của chúng tôi!',
-              style: GoogleFonts.rubikBubbles(
-                fontSize: 20,
+              style: GoogleFonts.kanit(
+                fontSize: 22,
                 color: const Color(0xff8ACDD7),
-                fontWeight: FontWeight.w100,
+                fontWeight: FontWeight.w500,
               ),
               textAlign: TextAlign.center,
             ),

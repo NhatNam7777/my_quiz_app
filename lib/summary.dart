@@ -53,7 +53,7 @@ class Summary extends StatelessWidget {
                             e['question'] as String,
                             style: const TextStyle(
                               color: Color(0xffF6FA70),
-                              fontSize: 20,
+                              fontSize: 19,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -61,7 +61,7 @@ class Summary extends StatelessWidget {
                             e['correct_answer'] as String,
                             style: const TextStyle(
                               color: Color(0xff00C4FF),
-                              fontSize: 17,
+                              fontSize: 15,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
@@ -69,7 +69,7 @@ class Summary extends StatelessWidget {
                             e['user_answer'] as String,
                             style: const TextStyle(
                               color: Color(0xffF6BA6F),
-                              fontSize: 17,
+                              fontSize: 15,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
