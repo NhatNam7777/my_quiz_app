@@ -32,7 +32,7 @@ class _QuizScreenState extends State<QuizScreen> {
           const SizedBox(
             height: 20,
           ),
-          ...questions[currentIndexQuestion].answer.map((e) {
+          ...questions[currentIndexQuestion].shuffledAnswers.map((e) {
             return AnswerBox(
               answer: e,
               nextQuestion: nextQuestion,
