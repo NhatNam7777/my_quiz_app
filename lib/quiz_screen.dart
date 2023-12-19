@@ -3,7 +3,11 @@ import 'package:my_quiz/data/question_data.dart';
 import 'package:my_quiz/answer_box.dart';
 
 class QuizScreen extends StatefulWidget {
-  const QuizScreen({super.key});
+  const QuizScreen({
+    super.key,
+    required this.switchScreen,
+  });
+  final void Function() switchScreen;
 
   @override
   State<QuizScreen> createState() => _QuizScreenState();
@@ -17,7 +21,10 @@ class _QuizScreenState extends State<QuizScreen> {
   Widget build(BuildContext context) {
     void nextQuestion() {
       setState(() {
-        if (currentIndexQuestion < questionsLength - 1) currentIndexQuestion++;
+        if (currentIndexQuestion < questionsLength - 1)
+          currentIndexQuestion++;
+        else
+          widget.switchScreen();
       });
     }
 
@@ -36,6 +43,7 @@ class _QuizScreenState extends State<QuizScreen> {
             return AnswerBox(
               answer: e,
               nextQuestion: nextQuestion,
+              switchScreen: widget.switchScreen,
             );
           })
         ],

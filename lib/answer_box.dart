@@ -5,9 +5,11 @@ class AnswerBox extends StatelessWidget {
     super.key,
     required this.answer,
     required this.nextQuestion,
+    required this.switchScreen,
   });
   final String answer;
   final void Function() nextQuestion;
+  final void Function() switchScreen;
 
   @override
   Widget build(BuildContext context) {

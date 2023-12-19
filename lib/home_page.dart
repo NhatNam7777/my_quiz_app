@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_quiz/quiz_screen.dart';
+import 'package:my_quiz/results_screen.dart';
 import 'package:my_quiz/start_screen.dart';
 
 class HomePage extends StatefulWidget {
@@ -12,16 +13,25 @@ class HomePage extends StatefulWidget {
 String activeTag = 'start_screen';
 
 class _HomePageState extends State<HomePage> {
-  void switchScreen() {
+  void switchToQuizScreen() {
     setState(() {
       activeTag = 'quiz_screen';
     });
   }
 
+  void switchToResultsScreen() {
+    setState(() {
+      activeTag = 'results_screen';
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    Widget activeScreen = StartScreen(switchScreen: switchScreen);
-    if (activeTag == 'quiz_screen') activeScreen = QuizScreen();
+    Widget activeScreen = StartScreen(switchScreen: switchToQuizScreen);
+    if (activeTag == 'quiz_screen') {
+      activeScreen = QuizScreen(switchScreen: switchToResultsScreen);
+    }
+    if (activeTag == 'results_screen') activeScreen = const ResultsScreen();
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
