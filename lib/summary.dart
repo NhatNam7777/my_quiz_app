@@ -43,31 +43,33 @@ class Summary extends StatelessWidget {
                     const SizedBox(
                       width: 30,
                     ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          e['question'] as String,
-                          style: const TextStyle(
-                              color: Color(0xffe16a20),
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500),
-                        ),
-                        Text(
-                          e['correct_answer'] as String,
-                          style: const TextStyle(
-                            color: Color(0xff1592e6),
-                            fontSize: 15,
+                    Container(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            e['question'] as String,
+                            style: const TextStyle(
+                                color: Color(0xffe16a20),
+                                fontSize: 20,
+                                fontWeight: FontWeight.w500),
                           ),
-                        ),
-                        Text(
-                          e['user_answer'] as String,
-                          style: const TextStyle(
-                            color: Color(0xffd63bf1),
-                            fontSize: 15,
+                          Text(
+                            e['correct_answer'] as String,
+                            style: const TextStyle(
+                              color: Color(0xff1592e6),
+                              fontSize: 15,
+                            ),
                           ),
-                        ),
-                      ],
+                          Text(
+                            e['user_answer'] as String,
+                            style: const TextStyle(
+                              color: Color(0xffd63bf1),
+                              fontSize: 15,
+                            ),
+                          ),
+                        ],
+                      ),
                     )
                   ],
                 ),
