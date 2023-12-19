@@ -41,6 +41,7 @@ class _QuizScreenState extends State<QuizScreen> {
               fontSize: 20,
               color: Color(0xff3b74ae),
             ),
+            textAlign: TextAlign.center,
           ),
           const SizedBox(
             height: 20,

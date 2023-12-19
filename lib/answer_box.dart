@@ -23,9 +23,16 @@ class AnswerBox extends StatelessWidget {
             borderRadius: BorderRadius.circular(40),
           ),
           foregroundColor: const Color(0xff3b74ae),
+          padding: EdgeInsets.only(left: 30),
         ),
         onPressed: selectAnswer,
-        child: Text(answer),
+        child: Align(
+          alignment: Alignment.centerLeft,
+          child: Text(
+            answer,
+            textAlign: TextAlign.left,
+          ),
+        ),
       ),
     );
   }

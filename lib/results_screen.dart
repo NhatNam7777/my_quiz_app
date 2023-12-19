@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_quiz/data/question_data.dart';
 import 'package:my_quiz/summary.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ResultsScreen extends StatelessWidget {
   ResultsScreen({
@@ -34,13 +35,26 @@ class ResultsScreen extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-              'You answered $correctAnswerNum out of ${questions.length} questions correctly!'),
+            'You answered $correctAnswerNum out of ${questions.length} questions correctly!',
+            style: GoogleFonts.rubikBubbles(
+              fontSize: 20,
+              color: Colors.pink,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(
+            height: 30,
+          ),
           Summary(
             summary: subSum,
           ),
-          TextButton(
+          TextButton.icon(
+            style: TextButton.styleFrom(
+              foregroundColor: Colors.white,
+            ),
             onPressed: resetQuiz,
-            child: const Text('Reset Quiz'),
+            icon: Icon(Icons.refresh),
+            label: const Text('Reset Quiz!'),
           ),
         ],
       ),
