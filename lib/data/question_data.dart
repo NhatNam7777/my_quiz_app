@@ -42,7 +42,7 @@ const questions = [
   QuizModel(
     question:
         'Ngày 10/3 âm lịch hàng năm được chính thức quy định là ngày Quốc lễ Giỗ Tổ Hùng Vương'
-        'vào triều đại nào trong lịch sử nước ta?',
+        ' vào triều đại nào trong lịch sử nước ta?',
     answers: [
       'Nhà Nguyễn',
       'Nhà Lý',
@@ -79,8 +79,8 @@ const questions = [
   ),
   QuizModel(
     question:
-        'Những vần thơ "Trường Sơn chí lớn ông ta/ Cửu Long lòng mẹ bao la sóng trảo" nằm'
-        'trong tác phẩm nào của nhà thơ Lê Anh Xuân?',
+        'Những vần thơ "Trường Sơn chí lớn ông ta/ Cửu Long lòng mẹ bao la sóng trào" nằm'
+        ' trong tác phẩm nào của nhà thơ Lê Anh Xuân?',
     answers: [
       'Nguyễn Văn Trỗi',
       'Dáng đứng Việt Nam',
@@ -90,7 +90,7 @@ const questions = [
   ),
   QuizModel(
     question:
-        'Vị tổng thống Mỹ nào từng phải nhận hai giải Mâm xôi vàng trong cùng một năm?',
+        'Vị tổng thống Mỹ nào từng phải nhận hai giải Mâm Xôi Vàng trong cùng một năm?',
     answers: [
       'Donald Trump',
       'Bill Clinton',
@@ -99,7 +99,7 @@ const questions = [
     ],
   ),
   QuizModel(
-      question: 'Từ nào còn thiéu trong câu thành ngữ: "Nhìn gà hoá ...?',
+      question: 'Từ nào còn thiếu trong câu thành ngữ: "Nhìn gà hoá ...?',
       answers: [
         'Cuốc',
         'Cú',
@@ -127,7 +127,7 @@ const questions = [
   ),
   QuizModel(
     question: 'Trong lễ Hiển Linh (Epiphany) 2019 tổng thống nga Putin đã thực'
-        'hiện nghi thức gì?',
+        ' hiện nghi thức gì?',
     answers: [
       'Ngâm mình dưới hồ băng',
       'Đi trên than nóng',
