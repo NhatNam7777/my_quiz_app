@@ -20,7 +20,7 @@ class Summary extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const SizedBox(
-                      width: 30,
+                      width: 25,
                     ),
                     Container(
                       height: 30,
@@ -41,9 +41,9 @@ class Summary extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(
-                      width: 30,
+                      width: 10,
                     ),
-                    Container(
+                    Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -70,7 +70,10 @@ class Summary extends StatelessWidget {
                           ),
                         ],
                       ),
-                    )
+                    ),
+                    const SizedBox(
+                      width: 15,
+                    ),
                   ],
                 ),
               );
