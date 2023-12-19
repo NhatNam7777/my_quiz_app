@@ -4,11 +4,11 @@ class AnswerBox extends StatelessWidget {
   const AnswerBox({
     super.key,
     required this.answer,
-    required this.nextQuestion,
+    required this.selectAnswer,
     required this.switchScreen,
   });
   final String answer;
-  final void Function() nextQuestion;
+  final void Function() selectAnswer;
   final void Function() switchScreen;
 
   @override
@@ -24,7 +24,7 @@ class AnswerBox extends StatelessWidget {
           ),
           foregroundColor: const Color(0xff3b74ae),
         ),
-        onPressed: nextQuestion,
+        onPressed: selectAnswer,
         child: Text(answer),
       ),
     );

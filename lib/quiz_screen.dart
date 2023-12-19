@@ -6,25 +6,28 @@ class QuizScreen extends StatefulWidget {
   const QuizScreen({
     super.key,
     required this.switchScreen,
+    required this.storeAnswers,
   });
   final void Function() switchScreen;
+  final void Function(String answer) storeAnswers;
 
   @override
   State<QuizScreen> createState() => _QuizScreenState();
 }
 
-int currentIndexQuestion = 0;
-int questionsLength = questions.length;
-
 class _QuizScreenState extends State<QuizScreen> {
+  int currentIndexQuestion = 0;
+  int questionsLength = questions.length;
+
   @override
   Widget build(BuildContext context) {
     void nextQuestion() {
       setState(() {
-        if (currentIndexQuestion < questionsLength - 1)
+        if (currentIndexQuestion < questionsLength - 1) {
           currentIndexQuestion++;
-        else
+        } else {
           widget.switchScreen();
+        }
       });
     }
 
@@ -33,8 +36,11 @@ class _QuizScreenState extends State<QuizScreen> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            questions[currentIndexQuestion].question + '?',
-            style: const TextStyle(fontSize: 20, color: Color(0xff3b74ae)),
+            questions[currentIndexQuestion].question,
+            style: const TextStyle(
+              fontSize: 20,
+              color: Color(0xff3b74ae),
+            ),
           ),
           const SizedBox(
             height: 20,
@@ -42,7 +48,10 @@ class _QuizScreenState extends State<QuizScreen> {
           ...questions[currentIndexQuestion].shuffledAnswers.map((e) {
             return AnswerBox(
               answer: e,
-              nextQuestion: nextQuestion,
+              selectAnswer: () {
+                nextQuestion();
+                widget.storeAnswers(e);
+              },
               switchScreen: widget.switchScreen,
             );
           })
