@@ -10,13 +10,14 @@ class QuizScreen extends StatefulWidget {
 }
 
 int currentIndexQuestion = 0;
+int questionsLength = questions.length;
 
 class _QuizScreenState extends State<QuizScreen> {
   @override
   Widget build(BuildContext context) {
     void nextQuestion() {
       setState(() {
-        currentIndexQuestion++;
+        if (currentIndexQuestion < questionsLength - 1) currentIndexQuestion++;
       });
     }
 
