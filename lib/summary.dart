@@ -25,11 +25,12 @@ class Summary extends StatelessWidget {
                     Container(
                       height: 30,
                       width: 30,
+                      margin: const EdgeInsets.only(top: 3),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         color: e['user_answer'] == e['correct_answer']
-                            ? Colors.green.shade400
-                            : Colors.red.shade300,
+                            ? Colors.green.shade500
+                            : Colors.red.shade600,
                       ),
                       child: Center(
                         child: Text(
@@ -46,26 +47,30 @@ class Summary extends StatelessWidget {
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Text(
                             e['question'] as String,
                             style: const TextStyle(
-                                color: Color(0xffe16a20),
-                                fontSize: 20,
-                                fontWeight: FontWeight.w500),
+                              color: Color(0xffF6FA70),
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
                           Text(
                             e['correct_answer'] as String,
                             style: const TextStyle(
-                              color: Color(0xff1592e6),
-                              fontSize: 15,
+                              color: Color(0xff00C4FF),
+                              fontSize: 17,
+                              fontWeight: FontWeight.w600,
                             ),
                           ),
                           Text(
                             e['user_answer'] as String,
                             style: const TextStyle(
-                              color: Color(0xffd63bf1),
-                              fontSize: 15,
+                              color: Color(0xffF6BA6F),
+                              fontSize: 17,
+                              fontWeight: FontWeight.w600,
                             ),
                           ),
                         ],

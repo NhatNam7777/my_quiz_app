@@ -34,13 +34,17 @@ class ResultsScreen extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(
-            'You answered $correctAnswerNum out of ${questions.length} questions correctly!',
-            style: GoogleFonts.rubikBubbles(
-              fontSize: 20,
-              color: Colors.pink,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: Text(
+              'Bạn đã trả lời đúng $correctAnswerNum trên ${questions.length} câu hỏi của chúng tôi!',
+              style: GoogleFonts.rubikBubbles(
+                fontSize: 20,
+                color: const Color(0xff8ACDD7),
+                fontWeight: FontWeight.w100,
+              ),
+              textAlign: TextAlign.center,
             ),
-            textAlign: TextAlign.center,
           ),
           const SizedBox(
             height: 30,
@@ -48,13 +52,21 @@ class ResultsScreen extends StatelessWidget {
           Summary(
             summary: subSum,
           ),
+          const SizedBox(
+            height: 20,
+          ),
           TextButton.icon(
             style: TextButton.styleFrom(
               foregroundColor: Colors.white,
             ),
             onPressed: resetQuiz,
-            icon: Icon(Icons.refresh),
-            label: const Text('Reset Quiz!'),
+            icon: const Icon(Icons.refresh),
+            label: const Text(
+              'Làm lại!',
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
           ),
         ],
       ),

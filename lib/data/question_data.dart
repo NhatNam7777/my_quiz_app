@@ -49,7 +49,7 @@ const questions = [
     ],
   ),
   QuizModel(
-    question: 'Quốc gia nào được mệnh danh là \"Xứ sở hoa hồng\"?',
+    question: 'Quốc gia nào được mệnh danh là "Xứ sở hoa hồng"?',
     answers: [
       'Bulgaria',
       'Romania',
@@ -78,8 +78,8 @@ const questions = [
     ],
   ),
   QuizModel(
-    question: 'Câu tự hoạ: Thụ \"sang\" - Cường \"hoang\" - Phương \"tàng\" -'
-        ' Tiến \"lãng\" nhắc đến bốn nhân vật nổi tiếng trong lĩnh vực nào?',
+    question: 'Câu tự hoạ: Thụ "sang" - Cường "hoang" - Phương "tàng" -'
+        ' Tiến "lãng" nhắc đến bốn nhân vật nổi tiếng trong lĩnh vực nào?',
     answers: [
       'Âm nhạc',
       'Hội hoạ',
@@ -89,7 +89,7 @@ const questions = [
   ),
   QuizModel(
     question:
-        'Tác phẩm \"Các nguyên lý toán học của triết học tự nhiên\" là công'
+        'Tác phẩm "Các nguyên lý toán học của triết học tự nhiên" là công'
         ' trình của nhà bác học nào?',
     answers: [
       'Newton',

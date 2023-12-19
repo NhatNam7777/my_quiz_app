@@ -9,46 +9,55 @@ class StartScreen extends StatelessWidget {
   final void Function() switchScreen;
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Opacity(
-          opacity: 0.8,
-          child: Image.asset('lib/assets/images/quiz-logo.png'),
-        ),
-        const SizedBox(
-          height: 30,
-        ),
-        const Text(
-          'Test your brain',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 40,
-            fontFamily: 'Preahvihear',
-          ),
-        ),
-        const SizedBox(
-          height: 30,
-        ),
-        TextButton.icon(
-          onPressed: switchScreen,
-          label: const Text(
-            'Start Challenge',
-          ),
-          icon: const Icon(
-            Icons.schedule_rounded,
-          ),
-          style: TextButton.styleFrom(
-            foregroundColor: Colors.red,
-            backgroundColor: Colors.blue.shade200,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
+    final width = MediaQuery.of(context).size.width;
+    return SizedBox(
+      width: double.infinity,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Opacity(
+            opacity: 0.5,
+            child: Image.asset(
+              'lib/assets/images/quiz-logo.png',
+              width: width * 0.7,
             ),
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-            textStyle: const TextStyle(fontSize: 15, fontFamily: 'Preahvihear'),
           ),
-        )
-      ],
+          const SizedBox(
+            height: 30,
+          ),
+          const Text(
+            'Tìm nhà hiền triết',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 30,
+              fontFamily: 'Preahvihear',
+            ),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+          TextButton.icon(
+            onPressed: switchScreen,
+            label: const Text(
+              'Kiểm tra',
+            ),
+            icon: const Icon(
+              Icons.remove_red_eye_outlined,
+            ),
+            style: TextButton.styleFrom(
+              foregroundColor: Colors.red,
+              backgroundColor: Colors.blue.shade200,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+              textStyle:
+                  const TextStyle(fontSize: 15, fontFamily: 'Preahvihear'),
+            ),
+          )
+        ],
+      ),
     );
   }
 }

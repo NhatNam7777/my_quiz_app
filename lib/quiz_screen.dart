@@ -35,13 +35,18 @@ class _QuizScreenState extends State<QuizScreen> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(
-            questions[currentIndexQuestion].question,
-            style: const TextStyle(
-              fontSize: 20,
-              color: Color(0xff3b74ae),
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 15,
             ),
-            textAlign: TextAlign.center,
+            child: Text(
+              questions[currentIndexQuestion].question,
+              style: const TextStyle(
+                fontSize: 20,
+                color: Color(0xffFFC436),
+              ),
+              textAlign: TextAlign.center,
+            ),
           ),
           const SizedBox(
             height: 20,

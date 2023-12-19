@@ -22,15 +22,15 @@ class AnswerBox extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(40),
           ),
-          foregroundColor: const Color(0xff3b74ae),
-          padding: EdgeInsets.only(left: 30),
+          foregroundColor: const Color(0xff3D0C11),
+          padding: const EdgeInsets.only(left: 0),
         ),
         onPressed: selectAnswer,
         child: Align(
-          alignment: Alignment.centerLeft,
+          alignment: Alignment.center,
           child: Text(
             answer,
-            textAlign: TextAlign.left,
+            textAlign: TextAlign.center,
           ),
         ),
       ),

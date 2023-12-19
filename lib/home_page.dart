@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_quiz/data/question_data.dart';
 import 'package:my_quiz/quiz_screen.dart';
 import 'package:my_quiz/results_screen.dart';
 import 'package:my_quiz/start_screen.dart';
@@ -56,9 +55,11 @@ class _HomePageState extends State<HomePage> {
     }
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.blue.shade200, Colors.pink.shade200],
+            colors: [Color(0xff6D2C88), Color(0xffF6A776)],
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
           ),
         ),
         child: activeScreen,
